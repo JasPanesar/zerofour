@@ -10,6 +10,7 @@
 		<imagesize name="homefeature1image" width="367" height="217" />
 		<imagesize name="homefeature2image" width="180" height="167" />
 		<imagesize name="homespotlightimage" width="367" height="168" />
+		<imagesize name="bodyimage" width="783" height="294" />
 	</imagesizes>
 
 	<extensions>

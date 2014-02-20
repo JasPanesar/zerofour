@@ -31,6 +31,7 @@ component extends="mura.cfobject" output="false" {
 
 		// buttons
 			this.customButtonClass = 'button';
+			this.customButtonClassAlt = 'button alt';
 
 			this.searchResultWrapperClass='';
 			this.searchResultsRowClass='';
@@ -45,6 +46,13 @@ component extends="mura.cfobject" output="false" {
 			this.loginFormSubmitClass=this.customButtonClass;
 			this.mailingListSubmitClass=this.customButtonClass;
 			this.userToolsLoginFormSubmitClass=this.customButtonClass;
+			this.notRegisteredLinkClass=this.customButtonClass;
+			this.editProfileExtAttributeDownloadButtonClass=this.customButtonClass;
+			this.editProfileSubmitButtonClass=this.customButtonClass;
+			this.userToolsLoginFormSubmitClass=this.customButtonClass;
+			this.userToolsNotRegisteredLinkClass=this.customButtonClass;
+			this.userToolsEditProfileLinkClass=this.customButtonClass;
+			this.userToolsLogoutLinkClass=this.customButtonClassAlt;
 
 
 	// custom theme methods
