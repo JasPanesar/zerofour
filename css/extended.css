@@ -1,11 +1,30 @@
-ol.linenums {
-	list-style-type: decimal;
-}
+/*
+	This file is part of the ZeroFour Mura CMS Theme
 
-nav ul ul {
-	margin-left: 1em;
-	margin-bottom: 0;
-}
+	Notes:
+		- this is where custom overrides to both the original theme and Mura CMS styling is added
+*/
+
+/* Prettyprint */
+	ol.linenums {
+		list-style-type: decimal;
+	}
+
+/* misc. */
+	nav ul ul {
+		margin-left: 1em;
+		margin-bottom: 0;
+	}
+
+	.moreResults p, .moreResults ul {
+		margin-bottom: 0;
+	}
+
+	.map img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
 
 /* pagination */
 	ul.pagination li {
@@ -43,10 +62,12 @@ nav ul ul {
 		margin: 0 0 2em 0;
 		width: 100%;
 	}
+
 	#svRatings #rateIt, #svRatings #avgrating {
 		width:auto;
 		margin-right: 2em;
 	}
+
 	#numvotes {
 		font-style: normal;
 		font-weight: normal;
@@ -58,23 +79,13 @@ nav ul ul {
 		color: #3a8eb5;
 	}
 
-.moreResults p, .moreResults ul {
-	margin-bottom: 0;
-}
-
-.map img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-
-
-span.editableObject footer {
-	margin-bottom: 5em;
-}
-span.editableObject:last-child footer {
-	margin-bottom: 0;
-}
+/* Editable Objects */
+	span.editableObject footer {
+		margin-bottom: 5em;
+	}
+	span.editableObject:last-child footer {
+		margin-bottom: 0;
+	}
 
 /* Sidebar */
 	#sidebar a.current, .mura-category-summary li.current a, .mura-nav-archive li.current a {
@@ -110,136 +121,85 @@ span.editableObject:last-child footer {
 	}
 
 /* Forms */
+	form {}
 
-		form
-		{
+		form legend {
+			font-weight: bold;
+			padding:1em 0 0.5em 0;
+			font-size: 1.2em;
+		}
+		
+		form label {
+			display: block;
 		}
 
-			form legend {
-				font-weight: bold;
-				padding:1em 0 0.5em 0;
-				font-size: 1.2em;
-			}
-		
-			form .actions
-			{
-				margin-bottom: 0;
-			}
-			
-			form label
-			{
-				display: block;
-			}
+		form input.text,
+		form input[type='text'],
+		form input[type='password'],
+		form select,
+		form textarea {
+			display: block;
+			box-shadow: inset 0 0 0 1px #e6e6e6;
+			background: #f8f8f8;
+			width: 100%;
+			padding: 0.85em 1em 0.85em 1em;
+			border-radius: 0.25em;
+			border: 0;
+			-moz-transition: all 0.25s ease-in-out;
+			-webkit-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			-o-appearance: none;
+			-ms-appearance: none;
+			appearance: none;
+		}
+
+		form input[type='checkbox'] {
+			-webkit-appearance: checkbox;
+		}
+		form input[type='radio'] {
+			-webkit-appearance: radio;
+		}
 
 			form input.text,
 			form input[type='text'],
 			form input[type='password'],
-			form select,
-			form textarea
-			{
-				display: block;
-				box-shadow: inset 0 0 0 1px #e6e6e6;
-				background: #f8f8f8;
-				width: 100%;
-				padding: 0.85em 1em 0.85em 1em;
-				border-radius: 0.25em;
-				border: 0;
-				-moz-transition: all 0.25s ease-in-out;
-				-webkit-transition: all 0.25s ease-in-out;
-				-o-transition: all 0.25s ease-in-out;
-				-ms-transition: all 0.25s ease-in-out;
-				transition: all 0.25s ease-in-out;
-				-moz-appearance: none;
-				-webkit-appearance: none;
-				-o-appearance: none;
-				-ms-appearance: none;
-				appearance: none;
+			form select {
+				line-height: 1.25em;
 			}
 
-			form input[type='checkbox'] {
-				-webkit-appearance: checkbox;
-			}
-			form input[type='radio'] {
-				-webkit-appearance: radio;
-			}
-
-				form input.text,
-				form input[type='text'],
-				form input[type='password'],
-				form select
-				{
-					line-height: 1.25em;
-				}
-
-				form .select
-				{
-					position: relative;
-				}
-				
-					form .select select
-					{
-						text-indent: 0.01px;
-						text-overflow: '';
-   					}
-				
-					form .select:before
-					{
-						content: '';
-						position: absolute;
-						top: 15%;
-						right: 1em;
-						width: 1.25em;
-						height: 75%;
-						background: url('images/arrow.svg') center center no-repeat;
-						background-size: contain;
-						z-index: 1;
-					}
-
-						form .select select::-ms-expand
-						{
-							display: none;
-						}
-
-						.dark form .select:before
-						{
-							background: url('images/dark-arrow.svg') center center no-repeat;
-							background-size: contain;
-						}
-
-				form input.text:focus,
-				form select:focus,
-				form textarea:focus
-				{
-					outline: 0;
-					box-shadow: inset 0 0 0 1px #afd9e0;
-					background: #fcfcfc;
-				}
-
-			form textarea
-			{
-				min-height: 13em;
-			}
-			
-			form select
-			{
-				position: relative;
-			}
-			
-				form select option
-				{
-					color: #000;
-				}
-			
-			form ::-moz-focus-inner
-			{
-				border: 0;
+			form input.text:focus,
+			form select:focus,
+			form textarea:focus {
+				outline: 0;
+				box-shadow: inset 0 0 0 1px #afd9e0;
+				background: #fcfcfc;
 			}
 
-			form .formerize-placeholder { color: #555 !important; }
-			form ::-webkit-input-placeholder { color: #aaa !important; }
-			form :-moz-placeholder { color: #555 !important; }
-			form ::-moz-placeholder { color: #555 !important; }
-			form :-ms-input-placeholder { color: #555 !important; }
+		form textarea {
+			min-height: 13em;
+		}
+		
+		form select {
+			position: relative;
+		}
+		
+			form select option {
+				color: #000;
+			}
+		
+		form ::-moz-focus-inner {
+			border: 0;
+		}
+
+		form .formerize-placeholder { color: #555 !important; }
+		form ::-webkit-input-placeholder { color: #aaa !important; }
+		form :-moz-placeholder { color: #555 !important; }
+		form ::-moz-placeholder { color: #555 !important; }
+		form :-ms-input-placeholder { color: #555 !important; }
 
 
 /* home features1 headings */
