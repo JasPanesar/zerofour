@@ -87,6 +87,17 @@ component extends="mura.cfobject" output="false" {
 					: 'No Content Collections Exist!';
 			}
 
+		public any function getHomeBean() {
+			return variables.$.getBean('content').loadby(filename='');
+		}
+
+		public string function dspBackgroundImage() {
+			var img = variables.$.getURLForImage(fileid=getHomeBean().getValue('headerBackgroundImage'), size='headerbackgroundimage');
+			return Len(img) 
+				? '<style>##header-wrapper{background:url(' & img & ') top center;size:cover;}</style>'
+				: '';
+		}
+
 	// Helper
 		public any function dspComponent(string componentid) {
 			var bean = IsValid('uuid', arguments.componentid)

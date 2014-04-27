@@ -2,8 +2,24 @@
 	This file is part of the ZeroFour Mura CMS Theme
 --->
 <cfoutput>
-	<extension type="Page" subType="Home" hasSummary="0" hasBody="0" iconClass="icon-home">
+	<extension type="Page" subType="Home" hasSummary="0" hasBody="0" hasAssocFile="0" iconClass="icon-home">
+
 		<attributeset name="Home Page Header" container="Basic">
+
+			<!-- Header Background Image -->
+				<attribute 
+					name="headerBackgroundImage"
+					label="Header Background Image"
+					hint="This is the background image used throughout the site."
+					type="file"
+					defaultValue=""
+					required="false"
+					validation=""
+					regex=""
+					message=""
+					optionList=""
+					optionLabelList="" />
+
 			<attribute 
 				name="homeHeaderHeading"
 				label="Main Header Heading"
