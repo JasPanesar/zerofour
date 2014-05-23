@@ -16,23 +16,11 @@ component extends="mura.cfobject" output="false" {
 		// make sure 'Home' page set to 'Page/Home'
 		var homeBean = arguments.$.getBean('content').loadBy(filename='');
 		if ( homeBean.getValue('subType') != 'Home' ) {
-			homeBean.setValue('subType', 'Home').save();
+			homeBean
+				.setValue('subType', 'Home')
+				.setValue('template', 'home.cfm')
+				.save();
 		}
-
-	}
-
-	public any function onSiteRequestStart($) {
-
-		/* cfStatic */
-		// http://dominicwatson.github.io/cfstatic/full-guide.html (See Configuration section)
-		// if in production, set checkForUpdates=false
-		/*
-		arguments.$.static(
-			outputDirectory = 'compiled'
-			, checkForUpdates = !arguments.$.siteConfig('cache')
-			, lessGlobals = ExpandPath($.siteConfig('themeAssetPath') & '/css/less-globals/globals.less')
-		);
-		*/
 
 	}
 
