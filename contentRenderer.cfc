@@ -12,7 +12,11 @@ component extends="mura.cfobject" output="false" {
 	*/
 
 	// contentRenderer settings
-		// GENERAL 
+	 	// Layout Manager
+			this.layoutmanager = true;
+			this.legacyObjects = false;
+			
+		// GENERAL
 			this.jsLib = 'jquery';
 			this.jsLibLoaded = true;
 			this.suppressWhitespace = false;
@@ -20,7 +24,7 @@ component extends="mura.cfobject" output="false" {
 
 		// nav
 			this.ulTopClass = 'style2';
-		
+
 		// headings
 			this.headline = 'h1';
 			this.subHead1 = 'h2';
@@ -64,7 +68,7 @@ component extends="mura.cfobject" output="false" {
 	// class extension specific methods
 		// helper for RSS Feeds
 			public any function convertFeedDateTime(string httpDateTime) {
-				return IsDate(arguments.httpDateTime) 
+				return IsDate(arguments.httpDateTime)
 					? LSDateFormat(ParseDateTime(arguments.httpDateTime), 'long')
 					: 'invalid';
 			}
@@ -77,8 +81,8 @@ component extends="mura.cfobject" output="false" {
 
 			public any function getLocalFeedNames() {
 				var rs = getLocalFeeds();
-				return rs.getRecordcount() 
-					? ValueList(rs.name, '^') 
+				return rs.getRecordcount()
+					? ValueList(rs.name, '^')
 					: 'No Content Collections Exist!';
 			}
 
@@ -88,7 +92,7 @@ component extends="mura.cfobject" output="false" {
 
 		public string function dspBackgroundImage() {
 			var img = variables.$.getURLForImage(fileid=getHomeBean().getValue('headerBackgroundImage'), size='headerbackgroundimage');
-			return Len(img) 
+			return Len(img)
 				? '<style>##header-wrapper{background:url(' & img & ') top center;size:cover;}</style>'
 				: '';
 		}
