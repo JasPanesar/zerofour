@@ -12,16 +12,16 @@ component extends="mura.cfobject" output="false" {
 	*/
 
 	// contentRenderer settings
-	 	// Layout Manager
-			this.layoutmanager = true;
-			this.legacyObjects = false;
-			
 		// GENERAL
 			this.jsLib = 'jquery';
 			this.jsLibLoaded = true;
 			this.suppressWhitespace = false;
 			this.showInlineEditor=true;
 
+		// layout manager
+			this.layoutmanager=true;
+			this.legacyObjects=false;
+			
 		// nav
 			this.ulTopClass = 'style2';
 

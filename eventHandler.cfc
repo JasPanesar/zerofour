@@ -4,10 +4,10 @@
 component extends="mura.cfobject" output="false" {
 
 	/*
-			This is the THEME eventHandler.cfc 
+			This is the THEME eventHandler.cfc
 
 			* Add theme-specific eventHandlers (listeners) here
-			* This file is much like a controller in a MVC application 
+			* This file is much like a controller in a MVC application
 			* Reload the application when additions/changes are made to THIS file!
 	*/
 
@@ -44,40 +44,5 @@ component extends="mura.cfobject" output="false" {
 		}
 
 	}
-
-	// Class Extensions
-		public any function onComponentWithHeadingAndButtonLinkBodyRender($) {
-			var str = '';
-			savecontent variable='str' {
-				WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentWithHeadingAndButtonLink.cfm'));
-			}
-			return str;
-		}
-
-		// this uses an external RSS Feed and outputs the data
-		public any function onComponentRSSFeedBodyRender($) {
-			var str = '';
-			savecontent variable='str' {
-				WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentRSSFeed.cfm'));
-			}
-			return str;
-		}
-
-		// used in the common footer
-			public any function onComponentSpotlightBodyRender($) {
-				var str = '';
-				savecontent variable='str' {
-					WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentSpotlight.cfm'));
-				}
-				return str;
-			}
-
-			public any function onComponentArticleListBodyRender($) {
-				var str = '';
-				savecontent variable='str' {
-					WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentArticleList.cfm'));
-				}
-				return str;
-			}
 
 }

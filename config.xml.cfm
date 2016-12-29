@@ -4,7 +4,7 @@
 	Notes:
 		* Custom Image Sizes + Class Extensions required for this theme.
 -->
-<theme>
+<mura>
 
 	<imagesizes>
 		<imagesize name="homefeature1image" width="367" height="217" />
@@ -15,12 +15,4 @@
 		<imagesize name="headerbackgroundimage" width="1400" height="651" />
 	</imagesizes>
 
-	<extensions>
-		<cfinclude template="class_extensions/definitions/pageHome.cfm" />
-		<cfinclude template="class_extensions/definitions/componentRSSFeed.cfm" />
-		<cfinclude template="class_extensions/definitions/componentSpotlight.cfm" />
-		<cfinclude template="class_extensions/definitions/componentArticleList.cfm" />
-		<cfinclude template="class_extensions/definitions/componentWithHeadingAndButtonLink.cfm" />
-	</extensions>
-
-</theme>
+</mura>
